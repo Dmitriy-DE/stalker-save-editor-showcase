@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" rx="28" fill="#090d16"/>
+<rect x="40" y="38" width="820" height="570" rx="22" fill="#0d1117" stroke="#30363d"/>
+<rect x="40" y="38" width="820" height="48" rx="22" fill="#161b22"/><rect x="40" y="62" width="820" height="24" fill="#161b22"/>
+<text x="72" y="68" fill="#3fb950" font-family="monospace" font-size="12">ZONE / save-editor</text>
+<rect x="40" y="86" width="210" height="522" fill="#0b0f17"/>
+<text x="64" y="125" fill="#8b949e" font-family="monospace" font-size="10">LOCAL SAVES</text>
+<g transform="translate(60 148)"><rect width="170" height="54" rx="10" fill="#161b22" stroke="#3fb950"/><text x="14" y="22" fill="#f0f6fc" font-family="Arial" font-size="12">slot_004.sav</text><text x="14" y="40" fill="#8b949e" font-family="monospace" font-size="9">S.T.A.L.K.E.R. 2</text></g>
+<g transform="translate(60 214)"><rect width="170" height="54" rx="10" fill="#111827"/><text x="14" y="22" fill="#c9d1d9" font-family="Arial" font-size="12">autosave_19.sav</text><text x="14" y="40" fill="#8b949e" font-family="monospace" font-size="9">Call of Pripyat</text></g>
+<text x="278" y="130" fill="#f0f6fc" font-family="Arial" font-size="23" font-weight="700">slot_004.sav</text>
+<text x="278" y="155" fill="#8b949e" font-family="monospace" font-size="10">GVAS · CRC verified · original preserved</text>
+<g transform="translate(278 184)">
+<rect width="250" height="90" rx="14" fill="#111827" stroke="#30363d"/><text x="18" y="28" fill="#8b949e" font-family="monospace" font-size="9">MONEY</text><text x="18" y="62" fill="#3fb950" font-family="Arial" font-size="22" font-weight="700">124,500</text>
+</g>
+<g transform="translate(548 184)">
+<rect width="275" height="90" rx="14" fill="#111827" stroke="#30363d"/><text x="18" y="28" fill="#8b949e" font-family="monospace" font-size="9">STAGED CHANGES</text><text x="18" y="62" fill="#f2cc60" font-family="Arial" font-size="22" font-weight="700">3</text>
+</g>
+<g transform="translate(278 296)">
+<rect width="545" height="244" rx="16" fill="#111827" stroke="#30363d"/>
+<text x="18" y="32" fill="#f0f6fc" font-family="Arial" font-size="16" font-weight="700">Inventory snapshot</text>
+<line x1="18" y1="50" x2="520" y2="50" stroke="#30363d"/>
+<text x="18" y="78" fill="#8b949e" font-family="monospace" font-size="9">ITEM</text><text x="360" y="78" fill="#8b949e" font-family="monospace" font-size="9">COUNT</text>
+<text x="18" y="112" fill="#c9d1d9" font-family="Arial" font-size="12">ammo_545</text><text x="360" y="112" fill="#c9d1d9" font-family="Arial" font-size="12">90</text>
+<text x="18" y="148" fill="#c9d1d9" font-family="Arial" font-size="12">medkit_army</text><text x="360" y="148" fill="#c9d1d9" font-family="Arial" font-size="12">4</text>
+<text x="18" y="184" fill="#c9d1d9" font-family="Arial" font-size="12">grenade_f1</text><text x="360" y="184" fill="#c9d1d9" font-family="Arial" font-size="12">2</text>
+</g>
+
+<g transform="translate(900 74)">
+<rect width="250" height="236" rx="18" fill="#111827" stroke="#30363d"/>
+<text x="18" y="31" fill="#58a6ff" font-family="monospace" font-size="10">BROWSER / PYODIDE</text>
+<rect x="18" y="51" width="214" height="100" rx="12" fill="#0d1117"/>
+<text x="34" y="80" fill="#8b949e" font-family="monospace" font-size="9">drop save here</text>
+<rect x="34" y="96" width="180" height="36" rx="10" fill="#161b22" stroke="#3fb950"/>
+<text x="124" y="119" text-anchor="middle" fill="#3fb950" font-family="Arial" font-size="12">Analyze locally</text>
+<text x="18" y="184" fill="#8b949e" font-family="monospace" font-size="9">no upload · same core</text>
+</g>
+<g transform="translate(900 340)">
+<rect width="250" height="200" rx="18" fill="#0d1117" stroke="#30363d"/>
+<text x="18" y="30" fill="#8b949e" font-family="monospace" font-size="10">CLI</text>
+<text x="18" y="66" fill="#3fb950" font-family="monospace" font-size="11">$ editor inspect slot_004.sav</text>
+<text x="18" y="96" fill="#c9d1d9" font-family="monospace" font-size="10">format: GVAS</text>
+<text x="18" y="120" fill="#c9d1d9" font-family="monospace" font-size="10">crc: verified</text>
+<text x="18" y="144" fill="#c9d1d9" font-family="monospace" font-size="10">inventory: parsed</text>
+<text x="18" y="168" fill="#3fb950" font-family="monospace" font-size="10">safe_to_preview: yes</text>
+</g>
+</svg>
