@@ -50,6 +50,10 @@ The same Python core running through Pyodide with local file processing.
 </tr>
 </table>
 
+<p align="center">
+  <img src="./assets/architecture-visual.svg" width="100%" alt="Architecture visual"/>
+</p>
+
 ## <code>02 / architecture</code>
 
 ~~~mermaid
@@ -73,6 +77,10 @@ flowchart TB
     QT --> STEAM
     WEB --> WASM
 ~~~
+
+<p align="center">
+  <img src="./assets/flow-visual.svg" width="100%" alt="Workflow visual"/>
+</p>
 
 ## <code>03 / safe_binary_editing</code>
 
