@@ -18,6 +18,10 @@ One Python editing core. Three front ends. Native boundaries where Python alone 
   <a href="https://stalker-save-editor.pages.dev"><b>▶ Open the browser build</b></a>
 </p>
 
+<p align="center">
+  <img src="./assets/overview.svg" width="100%" alt="System overview"/>
+</p>
+
 ## <code>01 / one_core_three_surfaces</code>
 
 <table>
