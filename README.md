@@ -46,6 +46,10 @@ A tool I built because save editing gets interesting when the file stops being J
 | corruption risk | preview + framing/checksum + round-trip verification |
 | distribution | PyInstaller builds + packaged diagnostics |
 
+<p align="center">
+  <img src="./assets/engineering-signature.svg" width="100%" alt="Engineering signature"/>
+</p>
+
 ## <code>05 / inspect</code>
 
 - [Architecture](docs/ARCHITECTURE.md)
