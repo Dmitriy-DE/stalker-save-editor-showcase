@@ -1,102 +1,130 @@
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0D1117,50:3FB950,100:6E7681&text=S.T.A.L.K.E.R.%20Save%20Editor&fontSize=38&fontColor=FFFFFF&fontAlignY=38&desc=Desktop%20%E2%80%A2%20Browser%20%E2%80%A2%20Binary%20formats%20%E2%80%A2%20Steam%20Cloud&descSize=16&descAlignY=60" />
-</p>
+<p align="center"><img src="./assets/hero.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor"/></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white" />
-  <img src="https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=webassembly&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyInstaller-FFCC00?style=for-the-badge&logo=python&logoColor=000" />
-  <img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Qt-41CD52?style=flat-square&logo=qt&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pyodide-FFD43B?style=flat-square&logo=python&logoColor=000"/>
+  <img src="https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Steam-000000?style=flat-square&logo=steam&logoColor=white"/>
 </p>
 
-# S.T.A.L.K.E.R. Save Editor — engineering showcase
+# S.T.A.L.K.E.R. Save Editor
 
-A cross-platform save editor built around one shared Python format core, exposed through **desktop UI, CLI and browser runtime**.
+A tool I built because game-save editing becomes much more interesting once the file stops being JSON.
 
-This is the public engineering showcase; the implementation repository remains private.
+One Python editing core. Three front ends. Native boundaries where Python alone is not enough.
 
-## The interesting part
+<p align="center">
+  <a href="https://stalker-save-editor.pages.dev"><b>▶ Open the browser build</b></a>
+</p>
 
-The application is not three editors. It is **one parsing/editing core** with multiple front ends.
+## <code>01 / one_core_three_surfaces</code>
 
-```mermaid
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### Desktop
+
+Qt UI, local save discovery, backups, export and Steam integration.
+
+</td>
+<td width="33%" valign="top">
+
+### CLI
+
+Inspection, research and batch-edit workflows without UI coupling.
+
+</td>
+<td width="33%" valign="top">
+
+### Browser
+
+The same Python core running through Pyodide with local file processing.
+
+</td>
+</tr>
+</table>
+
+## <code>02 / architecture</code>
+
+~~~mermaid
 flowchart TB
-    CORE[Shared Python editor core]
-    PARSER[Binary parsers / serializers]
+    CORE[Python format / edit core]
     SERVICE[UI-free EditorService]
-
-    DESKTOP[Qt desktop]
+    REG[Format registry]
+    QT[Qt desktop]
     CLI[CLI]
-    WEB[Browser / Pyodide]
-
+    WEB[Pyodide browser]
     STEAM[Native Steam API]
-    WASM[WASM decompression helper]
+    WASM[WASM decompression]
 
-    CORE --> PARSER
-    CORE --> SERVICE
-
-    DESKTOP --> SERVICE
+    QT --> SERVICE
     CLI --> SERVICE
     WEB --> SERVICE
 
-    DESKTOP --> STEAM
+    SERVICE --> CORE
+    CORE --> REG
+
+    QT --> STEAM
     WEB --> WASM
-```
+~~~
 
-## Engineering highlights
+## <code>03 / safe_binary_editing</code>
 
-- Python parsing and editing core shared across interfaces.
-- Desktop UI with Qt.
-- CLI for inspection/research and batch operations.
-- Browser build running the Python core through Pyodide.
-- WebAssembly/native helper boundary for decompression.
-- Binary container parsing, CRC safeguards and round-trip verification.
-- Immutable preview before write/export.
-- Native Steam Cloud integration through `ctypes`.
-- Linux and Windows packaging with PyInstaller.
-- Packaged-build diagnostics in CI.
-
-## Supported product families
-
-The private implementation contains registered support for S.T.A.L.K.E.R. 2 and the original PC trilogy, with format-specific capability checks rather than assuming every save has the same structure.
-
-Unknown or unsupported structures fail closed instead of being blindly rewritten.
-
-## Safety model for binary editing
-
-```text
-read
- ↓
+~~~text
 identify format
- ↓
-parse known structures
- ↓
-stage changes
- ↓
-immutable preview
- ↓
-rebuild + safeguards
- ↓
-round-trip verification
- ↓
-write NEW copy
-```
+   ↓
+parse only known structures
+   ↓
+stage mutation
+   ↓
+preview
+   ↓
+rebuild framing / checksums
+   ↓
+round-trip verify
+   ↓
+write a NEW copy
+~~~
 
-## Browser architecture
+> If I cannot prove how to rewrite a structure safely, the editor should refuse the edit.
 
-The web build processes the selected save locally in the browser. The Python source bundle is executed through Pyodide and native decompression work is provided through a WebAssembly boundary.
+That is much better than producing a save that only *looks* valid.
 
-A live web build of the private project is available at:
+## <code>04 / hard_parts</code>
 
-**https://stalker-save-editor.pages.dev**
+| Problem | Approach |
+|---|---|
+| multiple game/container families | explicit format registry |
+| unknown binary fields | keep opaque / read-only |
+| native Steam dependency | isolated ctypes boundary |
+| browser vs desktop | shared Python core through Pyodide |
+| native decompression | isolated WASM/native helper |
+| corruption risk | preview + checksum/framing + round-trip verification |
+| distribution | PyInstaller Linux/Windows builds + packaged diagnostics |
 
-## Repository map
+## <code>05 / supported_direction</code>
+
+The private implementation contains registered handling for:
+
+- S.T.A.L.K.E.R. 2
+- Shadow of Chornobyl
+- Clear Sky
+- Call of Pripyat
+
+Compatibility is capability-based; visually similar versions are not assumed to share a binary format.
+
+## <code>06 / technical_proof</code>
 
 - [Architecture](docs/ARCHITECTURE.md)
-- [Binary-editing principles](docs/BINARY_SAFETY.md)
+- [Binary-editing safety](docs/BINARY_SAFETY.md)
 - [Sanitised parser example](examples/container-parser.py)
+- [Live browser build](https://stalker-save-editor.pages.dev)
 
-## Source availability
+<details>
+<summary><b>Why the implementation stays private</b></summary>
 
-The complete parser, serializers, Steam integration and packaging configuration remain in the private implementation repository.
+The complete parser, serializers, Steam integration, packaging setup and research notes remain in the private source repository.
+
+</details>
