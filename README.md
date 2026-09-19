@@ -18,27 +18,33 @@ A tool I built because save editing gets interesting when the file stops being J
 
 <p align="center"><img src="./assets/product-mockup.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor product mockup"/></p>
 
-## <code>01 / editor_surface</code>
+<p align="center"><sub>Illustrative records; screen hierarchy, labels and visual system are reconstructed from the private source.</sub></p>
+
+## <code>01 / actual_surfaces</code>
+
+<p align="center"><img src="./assets/actual-surfaces.svg" width="100%" alt="Actual product surfaces"/></p>
+
+## <code>02 / editor_surface</code>
 
 <p align="center"><img src="./assets/features.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor features"/></p>
 
-## <code>02 / core_model</code>
+## <code>03 / core_model</code>
 
 <p align="center"><img src="./assets/core-model.svg" width="100%" alt="Binary edit model"/></p>
 
-## <code>03 / architecture</code>
+## <code>04 / architecture</code>
 
 <p align="center"><img src="./assets/architecture-visual.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor architecture"/></p>
 
 <p align="center"><img src="./assets/overview.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor overview"/></p>
 
-## <code>04 / safe_write_pipeline</code>
+## <code>05 / safe_write_pipeline</code>
 
 <p align="center"><img src="./assets/flow-visual.svg" width="100%" alt="Safe binary editing pipeline"/></p>
 
 > If I cannot prove how to rewrite a structure safely, the editor should refuse the edit.
 
-## <code>05 / hard_parts</code>
+## <code>06 / hard_parts</code>
 
 | Problem | Approach |
 |---|---|
@@ -50,13 +56,13 @@ A tool I built because save editing gets interesting when the file stops being J
 | corruption risk | preview + framing/checksum + round-trip verification |
 | distribution | PyInstaller builds + packaged diagnostics |
 
-## <code>06 / engineering_signature</code>
+## <code>07 / engineering_signature</code>
 
 <p align="center">
   <img src="./assets/engineering-signature.svg" width="100%" alt="Engineering signature"/>
 </p>
 
-## <code>07 / inspect</code>
+## <code>08 / inspect</code>
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Binary-editing safety](docs/BINARY_SAFETY.md)
