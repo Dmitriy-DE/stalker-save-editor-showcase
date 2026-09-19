@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
-<linearGradient id="a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3fb950"/><stop offset="1" stop-color="#6e7681"/></linearGradient>
-<filter id="g"><feGaussianBlur stdDeviation="32"/></filter>
-</defs>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090A08"/><stop offset="1" stop-color="#15170F"/></linearGradient></defs>
 <rect width="1200" height="400" rx="28" fill="url(#bg)"/>
-<circle cx="1050" cy="50" r="160" fill="#6e7681" opacity=".16" filter="url(#g)"/>
-<circle cx="850" cy="330" r="180" fill="#3fb950" opacity=".12" filter="url(#g)"/>
-<g opacity=".08" stroke="#8b949e"><path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200"/><path d="M150 0V400M300 0V400M450 0V400M600 0V400M750 0V400M900 0V400M1050 0V400"/></g>
-<text x="70" y="105" fill="#8b949e" font-family="monospace" font-size="15">PUBLIC ENGINEERING SHOWCASE</text>
-<text x="70" y="175" fill="#f0f6fc" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="700">S.T.A.L.K.E.R. Save Editor</text>
-<rect x="70" y="198" width="520" height="5" rx="2.5" fill="url(#a)"/>
-<text x="70" y="250" fill="#c9d1d9" font-family="Arial,Helvetica,sans-serif" font-size="20">One Python core across desktop, CLI and browser</text>
-<g transform="translate(70 320)"><rect width="132" height="34" rx="17" fill="#161b22" stroke="#30363d"/><text x="66" y="22" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="13">Python</text></g><g transform="translate(220 320)"><rect width="132" height="34" rx="17" fill="#161b22" stroke="#30363d"/><text x="66" y="22" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="13">Pyodide</text></g><g transform="translate(370 320)"><rect width="132" height="34" rx="17" fill="#161b22" stroke="#30363d"/><text x="66" y="22" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="13">Steam</text></g>
-<path d="M935 118 L958 118 L958 204 L790 204" fill="none" stroke="#3fb950" opacity=".55"/>
-<g transform="translate(790 90)"><rect width="145" height="56" rx="12" fill="#0d1117" stroke="#3fb950"/><text x="72.5" y="33" text-anchor="middle" fill="#f0f6fc" font-family="monospace" font-size="13">core</text></g><g transform="translate(960 90)"><rect width="145" height="56" rx="12" fill="#0d1117" stroke="#30363d"/><text x="72.5" y="33" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="13">desktop</text></g><g transform="translate(790 176)"><rect width="145" height="56" rx="12" fill="#0d1117" stroke="#30363d"/><text x="72.5" y="33" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="13">browser</text></g><g transform="translate(960 176)"><rect width="145" height="56" rx="12" fill="#0d1117" stroke="#30363d"/><text x="72.5" y="33" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="13">cloud</text></g>
+<rect x="1" y="1" width="1198" height="398" rx="27" fill="none" stroke="#3B3D30"/>
+<text x="64" y="76" fill="#C69A3E" font-family="Arial Narrow,Arial" font-size="20" font-weight="800" letter-spacing="2">S.T.A.L.K.E.R.</text>
+<text x="64" y="111" fill="#8E8974" font-family="monospace" font-size="11">ZONE / SAVE WORKBENCH</text>
+<text x="64" y="176" fill="#D8D2BE" font-family="Arial Narrow,Arial" font-size="48" font-weight="800">Save Editor</text>
+<text x="64" y="214" fill="#8E8974" font-family="Arial" font-size="18">Desktop · CLI · browser · Steam Cloud</text>
+<rect x="64" y="239" width="330" height="4" rx="2" fill="#C69A3E"/>
+<g transform="translate(64 302)"><g transform="translate(0 0)"><rect width="106" height="31" rx="4" fill="#1E2016" stroke="#3B3D30"/><text x="53" y="19" text-anchor="middle" fill="#D8D2BE" font-family="monospace" font-size="10">Python</text></g><g transform="translate(120 0)"><rect width="106" height="31" rx="4" fill="#1E2016" stroke="#3B3D30"/><text x="53" y="19" text-anchor="middle" fill="#D8D2BE" font-family="monospace" font-size="10">Qt</text></g><g transform="translate(240 0)"><rect width="106" height="31" rx="4" fill="#1E2016" stroke="#3B3D30"/><text x="53" y="19" text-anchor="middle" fill="#D8D2BE" font-family="monospace" font-size="10">Pyodide</text></g><g transform="translate(360 0)"><rect width="106" height="31" rx="4" fill="#1E2016" stroke="#3B3D30"/><text x="53" y="19" text-anchor="middle" fill="#D8D2BE" font-family="monospace" font-size="10">Steam API</text></g></g>
+<g transform="translate(730 72)">
+<rect width="400" height="244" rx="8" fill="#15170F" stroke="#3B3D30"/>
+<text x="20" y="30" fill="#C69A3E" font-family="monospace" font-size="10">ИГРЫ ЗОНЫ</text>
+<g transform="translate(20 48)"><rect width="360" height="32" rx="4" fill="#1E2016" stroke="#7D6127"/><rect x="0" y="0" width="3" height="32" fill="#C69A3E"/><text x="14" y="20" fill="#C69A3E" font-family="Arial" font-size="10">S.T.A.L.K.E.R. 2</text><text x="300" y="20" fill="#8E8974" font-family="monospace" font-size="8">3 saves</text></g><g transform="translate(20 88)"><rect width="360" height="32" rx="4" fill="#0C0D0A" stroke="#2A2E20"/><rect x="0" y="0" width="0" height="32" fill="#C69A3E"/><text x="14" y="20" fill="#8E8974" font-family="Arial" font-size="10">Call of Pripyat</text><text x="300" y="20" fill="#8E8974" font-family="monospace" font-size="8">5 saves</text></g><g transform="translate(20 128)"><rect width="360" height="32" rx="4" fill="#0C0D0A" stroke="#2A2E20"/><rect x="0" y="0" width="0" height="32" fill="#C69A3E"/><text x="14" y="20" fill="#8E8974" font-family="Arial" font-size="10">Clear Sky</text><text x="300" y="20" fill="#8E8974" font-family="monospace" font-size="8">2 saves</text></g><g transform="translate(20 168)"><rect width="360" height="32" rx="4" fill="#0C0D0A" stroke="#2A2E20"/><rect x="0" y="0" width="0" height="32" fill="#C69A3E"/><text x="14" y="20" fill="#8E8974" font-family="Arial" font-size="10">Shadow of Chernobyl</text><text x="300" y="20" fill="#8E8974" font-family="monospace" font-size="8">4 saves</text></g>
+<text x="20" y="226" fill="#7D6127" font-family="monospace" font-size="8">launcher · local saves · safe open</text>
+</g>
 </svg>
