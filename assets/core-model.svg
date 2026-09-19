@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
-<defs><linearGradient id="g"><stop stop-color="#3fb950"/><stop offset="1" stop-color="#6e7681"/></linearGradient></defs>
-<rect width="1200" height="300" rx="26" fill="#0d1117" stroke="#30363d"/>
-<text x="48" y="58" fill="#f0f6fc" font-family="Arial" font-size="24" font-weight="700">Binary edit model</text>
-<text x="48" y="84" fill="#8b949e" font-family="monospace" font-size="11">the objects / states the rest of the system is built around</text>
+<defs><linearGradient id="g"><stop stop-color="#C69A3E"/><stop offset="1" stop-color="#7D6127"/></linearGradient></defs>
+<rect width="1200" height="300" rx="26" fill="#0C0D0A" stroke="#3B3D30"/>
+<text x="48" y="58" fill="#D8D2BE" font-family="Arial" font-size="24" font-weight="700">Binary edit model</text>
+<text x="48" y="84" fill="#8E8974" font-family="monospace" font-size="11">the objects / states the rest of the system is built around</text>
 <rect x="48" y="99" width="250" height="4" rx="2" fill="url(#g)"/>
 <g transform="translate(48 132)">
-<rect width="206.4" height="110" rx="17" fill="#111827" stroke="#30363d"/>
-<text x="103.2" y="31" text-anchor="middle" fill="#3fb950" font-family="monospace" font-size="10">01</text>
-<text x="103.2" y="63" text-anchor="middle" fill="#f0f6fc" font-family="Arial" font-size="15" font-weight="700">Container</text>
-<text x="103.2" y="86" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="9">identify</text>
+<rect width="206.4" height="110" rx="17" fill="#15170F" stroke="#3B3D30"/>
+<text x="103.2" y="31" text-anchor="middle" fill="#C69A3E" font-family="monospace" font-size="10">01</text>
+<text x="103.2" y="63" text-anchor="middle" fill="#D8D2BE" font-family="Arial" font-size="15" font-weight="700">Container</text>
+<text x="103.2" y="86" text-anchor="middle" fill="#8E8974" font-family="monospace" font-size="9">identify</text>
 </g><g transform="translate(272.4 132)">
-<rect width="206.4" height="110" rx="17" fill="#111827" stroke="#30363d"/>
-<text x="103.2" y="31" text-anchor="middle" fill="#6e7681" font-family="monospace" font-size="10">02</text>
-<text x="103.2" y="63" text-anchor="middle" fill="#f0f6fc" font-family="Arial" font-size="15" font-weight="700">Format registry</text>
-<text x="103.2" y="86" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="9">interpret</text>
+<rect width="206.4" height="110" rx="17" fill="#15170F" stroke="#3B3D30"/>
+<text x="103.2" y="31" text-anchor="middle" fill="#7D6127" font-family="monospace" font-size="10">02</text>
+<text x="103.2" y="63" text-anchor="middle" fill="#D8D2BE" font-family="Arial" font-size="15" font-weight="700">Format registry</text>
+<text x="103.2" y="86" text-anchor="middle" fill="#8E8974" font-family="monospace" font-size="9">interpret</text>
 </g><g transform="translate(496.8 132)">
-<rect width="206.4" height="110" rx="17" fill="#111827" stroke="#30363d"/>
-<text x="103.2" y="31" text-anchor="middle" fill="#3fb950" font-family="monospace" font-size="10">03</text>
-<text x="103.2" y="63" text-anchor="middle" fill="#f0f6fc" font-family="Arial" font-size="15" font-weight="700">Parsed state</text>
-<text x="103.2" y="86" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="9">inspect</text>
+<rect width="206.4" height="110" rx="17" fill="#15170F" stroke="#3B3D30"/>
+<text x="103.2" y="31" text-anchor="middle" fill="#C69A3E" font-family="monospace" font-size="10">03</text>
+<text x="103.2" y="63" text-anchor="middle" fill="#D8D2BE" font-family="Arial" font-size="15" font-weight="700">Parsed state</text>
+<text x="103.2" y="86" text-anchor="middle" fill="#8E8974" font-family="monospace" font-size="9">inspect</text>
 </g><g transform="translate(721.2 132)">
-<rect width="206.4" height="110" rx="17" fill="#111827" stroke="#30363d"/>
-<text x="103.2" y="31" text-anchor="middle" fill="#6e7681" font-family="monospace" font-size="10">04</text>
-<text x="103.2" y="63" text-anchor="middle" fill="#f0f6fc" font-family="Arial" font-size="15" font-weight="700">Staged mutation</text>
-<text x="103.2" y="86" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="9">preview</text>
+<rect width="206.4" height="110" rx="17" fill="#15170F" stroke="#3B3D30"/>
+<text x="103.2" y="31" text-anchor="middle" fill="#7D6127" font-family="monospace" font-size="10">04</text>
+<text x="103.2" y="63" text-anchor="middle" fill="#D8D2BE" font-family="Arial" font-size="15" font-weight="700">Staged mutation</text>
+<text x="103.2" y="86" text-anchor="middle" fill="#8E8974" font-family="monospace" font-size="9">preview</text>
 </g><g transform="translate(945.6 132)">
-<rect width="206.4" height="110" rx="17" fill="#111827" stroke="#30363d"/>
-<text x="103.2" y="31" text-anchor="middle" fill="#3fb950" font-family="monospace" font-size="10">05</text>
-<text x="103.2" y="63" text-anchor="middle" fill="#f0f6fc" font-family="Arial" font-size="15" font-weight="700">Safe write</text>
-<text x="103.2" y="86" text-anchor="middle" fill="#8b949e" font-family="monospace" font-size="9">verify</text>
+<rect width="206.4" height="110" rx="17" fill="#15170F" stroke="#3B3D30"/>
+<text x="103.2" y="31" text-anchor="middle" fill="#C69A3E" font-family="monospace" font-size="10">05</text>
+<text x="103.2" y="63" text-anchor="middle" fill="#D8D2BE" font-family="Arial" font-size="15" font-weight="700">Safe write</text>
+<text x="103.2" y="86" text-anchor="middle" fill="#8E8974" font-family="monospace" font-size="9">verify</text>
 </g>
 </svg>
