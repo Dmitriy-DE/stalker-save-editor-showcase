@@ -1,76 +1,82 @@
 <p align="center"><img src="./assets/hero.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor"/></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Qt-41CD52?style=flat-square&logo=qt&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pyodide-FFD43B?style=flat-square&logo=python&logoColor=000"/>
+  <a href="https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor"><b>Source repository</b></a>
+  ·
+  <a href="https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/releases/latest"><b>Latest release</b></a>
+  ·
+  <a href="https://stalker-save-editor.pages.dev"><b>Browser build</b></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/C%23-.NET_10-512BD4?style=flat-square&logo=dotnet&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Avalonia-11-8B44AC?style=flat-square"/>
   <img src="https://img.shields.io/badge/WebAssembly-654FF0?style=flat-square&logo=webassembly&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Steam-000000?style=flat-square&logo=steam&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NativeAOT-CLI-30363d?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Lua-5.1-2C2D72?style=flat-square&logo=lua&logoColor=white"/>
 </p>
 
 # S.T.A.L.K.E.R. Save Editor
 
-A tool I built because save editing gets interesting when the file stops being JSON.
+This repository is the **visual engineering showcase** for the public open-source project.
 
-**One Python core. Desktop, CLI and browser. Native boundaries where Python alone is not enough.**
+The full source code, releases, installation instructions, issue tracker and detailed documentation live in:
 
-<p align="center"><a href="https://stalker-save-editor.pages.dev"><b>▶ Open the browser build</b></a></p>
+### → [Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor)
 
-<p align="center"><img src="./assets/product-mockup.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor product mockup"/></p>
+The project is now a cross-platform **.NET 10** save editor and game toolkit for the S.T.A.L.K.E.R. series — not the old Python/Qt prototype that this showcase previously described.
 
-<p align="center"><sub>Illustrative records; screen hierarchy, labels and visual system are reconstructed from the private source.</sub></p>
+> **Editing rule:** if the project cannot prove how to rewrite a structure safely, it stays read-only.
 
-## <code>01 / actual_surfaces</code>
+## <code>01 / supported_zone</code>
 
-<p align="center"><img src="./assets/actual-surfaces.svg" width="100%" alt="Actual product surfaces"/></p>
+<p align="center"><img src="./assets/overview.svg" width="100%" alt="Supported S.T.A.L.K.E.R. games"/></p>
 
-## <code>02 / editor_surface</code>
+The same core understands seven save formats across the original trilogy, Enhanced Editions and S.T.A.L.K.E.R. 2. Detection is based on file content rather than path assumptions.
+
+## <code>02 / actual_surfaces</code>
+
+<p align="center"><img src="./assets/actual-surfaces.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor surfaces"/></p>
+
+This is no longer just a binary editor. The project includes save discovery, inventory/stash editing, Steam Cloud and achievements, Save Timeline, Game Doctor, Save Doctor, Crash Analyzer, guarded Game Fixes, Toolkit snapshots/profiles and in-game companion tooling.
+
+## <code>03 / product_surface</code>
 
 <p align="center"><img src="./assets/features.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor features"/></p>
 
-## <code>03 / core_model</code>
+## <code>04 / core_model</code>
 
-<p align="center"><img src="./assets/core-model.svg" width="100%" alt="Binary edit model"/></p>
+<p align="center"><img src="./assets/core-model.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor core model"/></p>
 
-## <code>04 / architecture</code>
+Unknown structures are preserved as opaque/read-only data. Writable capabilities are exposed only where the format target has enough evidence for safe mutation.
+
+## <code>05 / architecture</code>
 
 <p align="center"><img src="./assets/architecture-visual.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor architecture"/></p>
 
-<p align="center"><img src="./assets/overview.svg" width="100%" alt="S.T.A.L.K.E.R. Save Editor overview"/></p>
+The solution separates Core, shared Avalonia application logic, Desktop, Browser/WASM, CLI/NativeAOT, Steam and Updater boundaries while reusing the same format/editing core.
 
-## <code>05 / safe_write_pipeline</code>
+## <code>06 / safe_write_pipeline</code>
 
-<p align="center"><img src="./assets/flow-visual.svg" width="100%" alt="Safe binary editing pipeline"/></p>
+<p align="center"><img src="./assets/flow-visual.svg" width="100%" alt="Safe save writing pipeline"/></p>
 
-> If I cannot prove how to rewrite a structure safely, the editor should refuse the edit.
+Every supported write is prepared, re-hashed, backed up, written through the guarded storage path and parsed/verified again. Unsupported or ambiguous structures fail closed.
 
-## <code>06 / hard_parts</code>
+## <code>07 / verification</code>
 
-| Problem | Approach |
-|---|---|
-| multiple container families | explicit format registry |
-| unknown binary fields | opaque / read-only |
-| native Steam dependency | isolated ctypes boundary |
-| browser vs desktop | shared Python core through Pyodide |
-| native decompression | isolated WASM/native helper |
-| corruption risk | preview + framing/checksum + round-trip verification |
-| distribution | PyInstaller builds + packaged diagnostics |
+<p align="center"><img src="./assets/engineering-signature.svg" width="100%" alt="Verification levels"/></p>
 
-## <code>07 / engineering_signature</code>
+The project tracks verification from synthetic round-trip tests through compiled package validation to retail-game and Steam Cloud evidence.
 
-<p align="center">
-  <img src="./assets/engineering-signature.svg" width="100%" alt="Engineering signature"/>
-</p>
+## <code>08 / inspect_the_real_project</code>
 
-## <code>08 / inspect</code>
+- [Main source repository](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor)
+- [Latest releases](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/releases/latest)
+- [Architecture](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/blob/main/ARCHITECTURE.md)
+- [Game Fixes](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/blob/main/docs/GAME_FIXES.md)
+- [Game / Save Doctor & Crash Analyzer](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/blob/main/docs/GAME_DOCTOR.md)
+- [Companion protocol](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/blob/main/docs/MOD_COMPANION_PROTOCOL.md)
+- [Packaging](https://github.com/Dmitriy-DE/S.T.A.L.K.E.R.-Save-Editor/blob/main/docs/PACKAGING.md)
+- [Browser build](https://stalker-save-editor.pages.dev)
 
-- [Architecture](docs/ARCHITECTURE.md)
-- [Binary-editing safety](docs/BINARY_SAFETY.md)
-- [Sanitised parser example](examples/container-parser.py)
-- [Live browser build](https://stalker-save-editor.pages.dev)
-
-<details><summary><b>Why the implementation stays private</b></summary>
-
-The complete parser, serializers, Steam integration, packaging setup and research notes remain in the private source repository.
-
-</details>
+<p align="center"><sub>S.T.A.L.K.E.R. is a trademark of its respective owner. This project is an independent community tool and is not affiliated with or endorsed by GSC Game World.</sub></p>
