@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071015"/><stop offset="1" stop-color="#0d1318"/></linearGradient>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#17232b"/></pattern>
+</defs>
+<rect width="1600" height="520" rx="26" fill="url(#bg)"/>
+<rect width="1600" height="520" rx="26" fill="url(#grid)" opacity=".28"/>
+<rect x="1" y="1" width="1598" height="518" rx="25" fill="none" stroke="#31404d"/>
+
+<text x="48" y="58" fill="#f2c037" font-family="monospace" font-size="24" font-weight="700">DIAGNOSTICS · THREE DIFFERENT JOBS</text>
+<text x="48" y="94" fill="#a8b4bc" font-family="Arial" font-size="21">Game Doctor inspects the installed game. Save Doctor inspects a save. Crash Analyzer inspects logs.</text>
+
+<g transform="translate(42 132)">
+  <rect width="492" height="330" rx="18" fill="#0c151d" stroke="#4cc9ff"/>
+  <text x="28" y="42" fill="#4cc9ff" font-family="Arial" font-size="28" font-weight="700">Game Doctor</text>
+  <text x="28" y="73" fill="#dbe3e8" font-family="Arial" font-size="18">“What is actually installed on this machine?”</text>
+
+  <text x="28" y="118" fill="#f2c037" font-family="monospace" font-size="11">INPUT</text>
+  <text x="28" y="143" fill="#a7b3bb" font-family="Arial" font-size="17">game folder / Steam manifest / build</text>
+
+  <text x="28" y="184" fill="#f2c037" font-family="monospace" font-size="11">CHECKS</text>
+  <text x="28" y="210" fill="#f2f4f6" font-family="Arial" font-size="17">• detects supported install + build ID</text>
+  <text x="28" y="237" fill="#f2f4f6" font-family="Arial" font-size="17">• verifies Companion / Game Fix ownership hashes</text>
+  <text x="28" y="264" fill="#f2f4f6" font-family="Arial" font-size="17">• classifies loose files as known / owned / unknown</text>
+  <text x="28" y="291" fill="#f2f4f6" font-family="Arial" font-size="17">• can isolate / restore S.T.A.L.K.E.R. 2 custom mods</text>
+
+  <text x="28" y="318" fill="#66df91" font-family="Arial" font-size="16" font-weight="700">Purpose: prove what can be changed safely before patching.</text>
+</g>
+
+<g transform="translate(554 132)">
+  <rect width="492" height="330" rx="18" fill="#0c151d" stroke="#66df91"/>
+  <text x="28" y="42" fill="#66df91" font-family="Arial" font-size="28" font-weight="700">Save Doctor</text>
+  <text x="28" y="73" fill="#dbe3e8" font-family="Arial" font-size="18">“Is this save structurally sane?”</text>
+
+  <text x="28" y="118" fill="#f2c037" font-family="monospace" font-size="11">INPUT</text>
+  <text x="28" y="143" fill="#a7b3bb" font-family="Arial" font-size="17">selected save file</text>
+
+  <text x="28" y="184" fill="#f2c037" font-family="monospace" font-size="11">CHECKS</text>
+  <text x="28" y="210" fill="#f2f4f6" font-family="Arial" font-size="17">• structural parsing</text>
+  <text x="28" y="237" fill="#f2f4f6" font-family="Arial" font-size="17">• validated quest / rule checks</text>
+  <text x="28" y="264" fill="#f2f4f6" font-family="Arial" font-size="17">• confirmed repair rules only</text>
+  <text x="28" y="291" fill="#f2f4f6" font-family="Arial" font-size="17">• unknown state stays unknown</text>
+
+  <text x="28" y="318" fill="#66df91" font-family="Arial" font-size="16" font-weight="700">Purpose: repair only what the project can actually prove.</text>
+</g>
+
+<g transform="translate(1066 132)">
+  <rect width="492" height="330" rx="18" fill="#0c151d" stroke="#ff914d"/>
+  <text x="28" y="42" fill="#ff914d" font-family="Arial" font-size="28" font-weight="700">Crash Analyzer</text>
+  <text x="28" y="73" fill="#dbe3e8" font-family="Arial" font-size="18">“What does this crash log really say?”</text>
+
+  <text x="28" y="118" fill="#f2c037" font-family="monospace" font-size="11">INPUT</text>
+  <text x="28" y="143" fill="#a7b3bb" font-family="Arial" font-size="17">X-Ray / supported crash log</text>
+
+  <text x="28" y="184" fill="#f2c037" font-family="monospace" font-size="11">EXTRACTS</text>
+  <text x="28" y="210" fill="#f2f4f6" font-family="Arial" font-size="17">• fatal error fields</text>
+  <text x="28" y="237" fill="#f2f4f6" font-family="Arial" font-size="17">• Lua script + line references</text>
+  <text x="28" y="264" fill="#f2f4f6" font-family="Arial" font-size="17">• known engine exception signatures</text>
+  <text x="28" y="291" fill="#f2f4f6" font-family="Arial" font-size="17">• validated guidance when a known rule exists</text>
+
+  <text x="28" y="318" fill="#66df91" font-family="Arial" font-size="16" font-weight="700">Purpose: explain the failure without inventing a fix.</text>
+</g>
+</svg>
