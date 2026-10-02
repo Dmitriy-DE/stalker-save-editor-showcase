@@ -30,28 +30,50 @@
 
 <table>
 <tr>
-<td width="33%" valign="top"><b>🗂 Library & inspection</b><br/><sub>Find saves across Steam, Proton, GOG and disc installs. Read metadata, game slot screenshots, world state and compare saves/backups.</sub></td>
-<td width="33%" valign="top"><b>🎒 Inventory & stashes</b><br/><sub>Edit money, stacks, condition, placement and upgrades; add/remove catalogue items; work with stashes, factions and safe level changer points.</sub></td>
-<td width="33%" valign="top"><b>☁️ Steam boundary</b><br/><sub>Compare local/cloud saves, download or explicitly upload, inspect and toggle achievements. Cloud writes are never silently retried.</sub></td>
-</tr>
-<tr>
-<td valign="top"><b>🩺 Doctors & diagnostics</b><br/><sub>Game Doctor, Save Doctor and Crash Analyzer inspect installs, saves, quest rules, logs, ownership hashes and unknown states without guessing.</sub></td>
-<td valign="top"><b>🛠 Game Fixes & Toolkit</b><br/><sub>Source-tracked fix catalogue, guarded presets, transactional install/remove, snapshots, profiles, config editing and rollback ownership.</sub></td>
-<td valign="top"><b>🎮 Companion</b><br/><sub>In-game tooling for the trilogy plus experimental S.T.A.L.K.E.R. 2 companion: teleport, weather, live actions and item tooling through explicit protocols.</sub></td>
+<td width="50%" valign="top">
+
+### Save editing
+
+**Library** — discovers saves across Steam, Proton, GOG and disc installs and shows real slot metadata/screenshots.
+
+**Overview / Compare / Timeline** — inspect actor/world state, compare another save or backup, and move through real save history.
+
+**Inventory & Stashes** — edit supported money, stacks, condition, placement and upgrades; add/remove catalogue items; work with stashes and validated level-changer actions.
+
+**Steam** — compare local/cloud state, download, explicitly upload and manage achievements without silent cloud retries.
+
+</td>
+<td width="50%" valign="top">
+
+### Game-side toolkit
+
+**Game Doctor** — inspects the **installed game itself**: discovers the install/build, verifies files owned by Companion/Game Fixes, identifies unknown loose files and checks whether a guarded patch can be applied safely.
+
+**Game Fixes** — source-tracked patch catalogue with target/build gates, guarded presets, transactional install/remove and rollback ownership.
+
+**Toolkit** — snapshots, profiles, bounded config editing and install audit.
+
+**Companion** — in-game actions for the trilogy plus an experimental S.T.A.L.K.E.R. 2 companion.
+
+</td>
 </tr>
 </table>
 
-## Supported zone
+## Diagnostics
 
-| Game | Read | Write | Extra tooling |
-|---|:---:|:---:|---|
-| **Shadow of Chernobyl 1.0004 / 1.0006** | ✅ | ✅ | Companion · Game Fixes · Doctors |
-| **Clear Sky 1.5.10** | ✅ | ✅ | Companion · Game Fixes · Doctors |
-| **Call of Pripyat 1.6.02** | ✅ | ✅ | Companion · Game Fixes · Doctors |
-| **Enhanced Editions — SoC / CS / CoP** | ✅ | capability-gated | Game Fixes · Doctors |
-| **S.T.A.L.K.E.R. 2: Heart of Chornobyl** | ✅ | capability-gated | Doctors · experimental companion |
+<p align="center"><img src="./assets/readme-diagnostics.svg" width="100%" alt="Game Doctor, Save Doctor and Crash Analyzer"/></p>
 
-<sub>Detection is based on file content rather than path assumptions. Unsupported/unknown structures remain visible but are not made writable.</sub>
+## Compatibility
+
+| Game | Save editor | Installed-game diagnostics | Companion / game-side tools |
+|---|---|---|---|
+| **Shadow of Chernobyl 1.0004 / 1.0006** | Full supported editing | Game Doctor + Save Doctor + Crash Analyzer | Companion + Game Fixes |
+| **Clear Sky 1.5.10** | Full supported editing | Game Doctor + Save Doctor + Crash Analyzer | Companion + Game Fixes |
+| **Call of Pripyat 1.6.02** | Full supported editing | Game Doctor + Save Doctor + Crash Analyzer | Companion + Game Fixes |
+| **Enhanced Editions — SoC / CS / CoP** | Read + capability-gated writes | Doctors / diagnostics where validated | Guarded Game Fixes |
+| **S.T.A.L.K.E.R. 2: Heart of Chornobyl** | Read + capability-gated writes | Game Doctor / save diagnostics where validated | Experimental companion |
+
+<sub>“Capability-gated” means the UI exposes a write only when the target has enough verified format/build evidence. Detection is based on file content and validated install metadata rather than path assumptions.</sub>
 
 ## Compare & inspect
 
