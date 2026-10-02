@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071015"/><stop offset="1" stop-color="#0d1318"/></linearGradient>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#17232b"/></pattern>
+</defs>
+<rect width="1600" height="500" rx="26" fill="url(#bg)"/><rect width="1600" height="500" rx="26" fill="url(#grid)" opacity=".32"/><rect x="1" y="1" width="1598" height="498" rx="25" fill="none" stroke="#31404d"/>
+<text x="48" y="58" fill="#f2c037" font-family="monospace" font-size="24" font-weight="700">ARCHITECTURE</text>
+<text x="48" y="92" fill="#a8b4bc" font-family="Arial" font-size="22">One shared .NET core. Multiple delivery surfaces and explicit native/platform boundaries.</text>
+
+<g transform="translate(410 130)">
+<rect width="780" height="98" rx="18" fill="#111820" stroke="#f2c037" stroke-width="2"/>
+<text x="390" y="40" text-anchor="middle" fill="#f2c037" font-family="Arial" font-size="28" font-weight="700">StalkerSaveEditor.Core</text>
+<text x="390" y="72" text-anchor="middle" fill="#b6c0c7" font-family="Arial" font-size="18">formats · editing · backups · catalogues · capabilities · patching</text>
+</g>
+
+<g font-family="Arial" text-anchor="middle">
+<g transform="translate(45 310)"><rect width="220" height="105" rx="16" fill="#0d1820" stroke="#4cc9ff"/><text x="110" y="42" fill="#4cc9ff" font-size="24" font-weight="700">Desktop</text><text x="110" y="72" fill="#dce3e7" font-size="17">Avalonia / MVVM</text></g>
+<g transform="translate(300 310)"><rect width="220" height="105" rx="16" fill="#0d1820" stroke="#4cc9ff"/><text x="110" y="42" fill="#4cc9ff" font-size="24" font-weight="700">Browser</text><text x="110" y="72" fill="#dce3e7" font-size="17">WebAssembly</text></g>
+<g transform="translate(555 310)"><rect width="220" height="105" rx="16" fill="#0d1820" stroke="#66df91"/><text x="110" y="42" fill="#66df91" font-size="24" font-weight="700">CLI</text><text x="110" y="72" fill="#dce3e7" font-size="17">NativeAOT</text></g>
+<g transform="translate(810 310)"><rect width="220" height="105" rx="16" fill="#0d1820" stroke="#9cb3c9"/><text x="110" y="42" fill="#9cb3c9" font-size="24" font-weight="700">Steam</text><text x="110" y="72" fill="#dce3e7" font-size="17">Cloud / stats</text></g>
+<g transform="translate(1065 310)"><rect width="220" height="105" rx="16" fill="#0d1820" stroke="#f2c037"/><text x="110" y="42" fill="#f2c037" font-size="24" font-weight="700">Updater</text><text x="110" y="72" fill="#dce3e7" font-size="17">signed manifests</text></g>
+<g transform="translate(1320 310)"><rect width="220" height="105" rx="16" fill="#0d1820" stroke="#66df91"/><text x="110" y="42" fill="#66df91" font-size="24" font-weight="700">Companion</text><text x="110" y="72" fill="#dce3e7" font-size="17">Lua / UE4SS</text></g>
+</g>
+
+<g stroke="#566772" stroke-width="3" fill="none">
+<path d="M800 228V270"/><path d="M155 270H1430"/><path d="M155 270V310"/><path d="M410 270V310"/><path d="M665 270V310"/><path d="M920 270V310"/><path d="M1175 270V310"/><path d="M1430 270V310"/>
+</g>
+<text x="48" y="462" fill="#87949e" font-family="Arial" font-size="18">Game Fixes and Toolkit operations reuse the guarded game-file layer with ownership hashes, transactional writes and rollback.</text>
+</svg>
