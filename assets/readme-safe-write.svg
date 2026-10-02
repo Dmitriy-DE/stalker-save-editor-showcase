@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071015"/><stop offset="1" stop-color="#0c1218"/></linearGradient>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#17232b"/></pattern>
+</defs>
+<rect width="1600" height="360" rx="26" fill="url(#bg)"/><rect width="1600" height="360" rx="26" fill="url(#grid)" opacity=".32"/><rect x="1" y="1" width="1598" height="358" rx="25" fill="none" stroke="#31404d"/>
+<text x="48" y="58" fill="#f2c037" font-family="monospace" font-size="24" font-weight="700">SAFE WRITE PIPELINE</text>
+<text x="48" y="92" fill="#a8b4bc" font-family="Arial" font-size="22">Every writable mutation goes through the same checked path. Unsupported structures fail closed.</text>
+
+<g font-family="Arial" font-size="22" font-weight="700" text-anchor="middle">
+<g transform="translate(50 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#f2c037"/><text x="77" y="40" fill="#f2c037">OPEN</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">source save</text></g>
+<g transform="translate(230 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#f2c037"/><text x="77" y="40" fill="#f2c037">DETECT</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">format</text></g>
+<g transform="translate(410 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#f2c037"/><text x="77" y="40" fill="#f2c037">PLAN</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">immutable edit</text></g>
+<g transform="translate(590 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#4cc9ff"/><text x="77" y="40" fill="#4cc9ff">RE-READ</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">fresh SHA-256</text></g>
+<g transform="translate(770 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#f2c037"/><text x="77" y="40" fill="#f2c037">BACKUP</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">original file</text></g>
+<g transform="translate(950 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#ff914d"/><text x="77" y="40" fill="#ff914d">WRITE</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">atomic path</text></g>
+<g transform="translate(1130 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#4cc9ff"/><text x="77" y="40" fill="#4cc9ff">PARSE</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">written result</text></g>
+<g transform="translate(1310 150)"><rect width="155" height="92" rx="16" fill="#0d1820" stroke="#66df91"/><text x="77" y="40" fill="#66df91">VERIFY</text><text x="77" y="68" fill="#dce3e7" font-size="16" font-weight="400">round-trip</text></g>
+</g>
+
+<g stroke="#566772" stroke-width="3">
+<path d="M205 196H230"/><path d="M385 196H410"/><path d="M565 196H590"/><path d="M745 196H770"/><path d="M925 196H950"/><path d="M1105 196H1130"/><path d="M1285 196H1310"/>
+</g>
+<text x="48" y="305" fill="#87949e" font-family="Arial" font-size="18">Unknown or ambiguous fields remain opaque/read-only. Steam Cloud writes require explicit confirmation and are never retried automatically.</text>
+</svg>
